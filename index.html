@@ -15,49 +15,32 @@
 <body>
     <main>
         <section class="main-section">
-            <div class= "input">
-            <h2>Question</h2>
-            <input name ="question" />
-            
-            <h3>Option One</h3>
-            <input name ="option-one">
-            
-            <h3>Option Two</h3>
-            <input name ="option-two">
-            
-                <div>
-                    <button id = "start-poll-button">Start Poll!</button>
-                </div>
+            <form>
+                <label>
+                    Poll question
+                    <input name="poll-question">
+                </label>
+                <label>
+                    Option 1
+                    <input name="option-one">
+                </label>
+                <label>
+                    Option 2
+                    <input name="option-two">
+                </label>
+                <button>Start Poll</button>
+            </form>
+            <div>
+                <button id="option-one-vote">Vote 1</button>
+                <button id="option-two-vote">Vote 2</button>
             </div>
-            <section class="voting">
-                <div>
-                <button id="option-one-plus">+ Option One</button>
-                <button id="option-two-plus">+ Option Two</button>
-                </div>  
-                <div>
-                    <button id="option-one-minus">- Option One</button>
-                    <button id="option-two-minus">- Option Two</button>
-                </div>
-                <div>
-                    <button id="end-poll">END</button>
-                </div>  
-            </section>
-            <h2 id ="poll-question"></h2>
-                <div class = "options">
-                    <div id = "option-one">
-                        <h5 id = "option-one-title"></h5>
-                        <p id = "option-one-votes"></p>
-                    </div>
-                    <div id = "option-two">
-                        <h5 id = "option-two-title"></h5>
-                        <p id = "option-two-votes"></p>
-                    </div>
-                </div>
-            <section> 
-                <h2>Past Polls</h2>
-                <div class ="previous-polls">
-                    
-                </div>
+            <div>
+                <button id="option-one-mins">Minus Vote 1</button>
+                <button id="option-two-minus">Minus Vote 2</button>
+            </div>
+            <div>
+                <button id ="poll-end">End poll</button>
+            </div>
             </section>
     </main>
     <footer>
