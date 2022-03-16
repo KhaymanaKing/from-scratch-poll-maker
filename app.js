@@ -68,12 +68,12 @@ function createPoll(){
         optionTwoVotes
     };
 }
-function createButtons(){
-    var plusOne = document.createElement('button');
-    var plusOneTxt = document.createTextNode('+'); 
-    plusOne.appendChild(plusOneTxt);
-    document.body.appendChild(plusOne);
-}
+// function createButtons(){
+//     var plusOne = document.createElement('button');
+//     var plusOneTxt = document.createTextNode('+'); 
+//     plusOne.appendChild(plusOneTxt);
+//     document.body.appendChild(plusOne);
+// }
 
 
   // get user input
