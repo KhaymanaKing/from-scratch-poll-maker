@@ -45,3 +45,25 @@ Additional considerations:
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
 ![wireframe for pollmaker](/assets/wireframespollmaker.jpg "wireframes for pollmaker")
+
+
+
+
+
+
+| User should be able to . . .                                                         |             |
+| :----------------------------------------------------------------------------------- | ----------: |
+| Visit the deployed pages on GitHub pages, with link in the About section of the Github repo|        2 |
+
+| Events                                                                               |             |
+| :----------------------------------------------------------------------------------- | ----------: |
+| On load, see a form and empty current poll div                                             |        2 |
+| On submit, add the poll options and question to the current poll div                                      |        2 |
+| On clicking add or subtract, increment and decrement the correct poll votes in the current poll div|     2 |
+| On clicking finish, empty the current poll div and add the current poll to the "past polls" div. All past polls should be visible in this div by looping through and calling `renderPoll` with each poll. |4|
+
+| Functions                                                              |             |
+| :----------------------------------------------------------------------------------- | ----------: |
+| IMPURE: `displayCurrentPoll()` : mutates DOM to display current state of current poll | 2|
+| IMPURE: `displayAllPolls()` : clears out DOM and appends to poll div using current state of past polls | 3 |
+| PURE: `renderPoll(poll)` : returns DOM node | 3|
