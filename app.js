@@ -46,27 +46,31 @@ minusButtonTwo.addEventListener('click', () => {
     optionTwoVotesEl.textContent = optionTwoVotes;
 });
 
-startPollButton.addEventListener('click', () => {
-    const pollQuestion = questionEl.value;
-    const firstOption = optionOneEl.value;
-    const secondOption = optionTwoEl.value;
-
-    question = pollQuestion;
-    optionOne = firstOption;
-    optionTwo = secondOption;
-    createPoll();
-    createButtons();
+startPollButton.addEventListener('submit', () => {
+    const data = new FormData(form);
+    question = data.get('question');
+    optionOne = data.get('optionOne');
+    optionTwo = data.get('optionTwo');
+    displayPoll();
 
 });
 
-function createPoll(){
-    return {
-        question: question,
-        optionOne: optionOne,
-        optionOneVotes: optionOneVotes,
-        optionTwo: optionTwo,
-        optionTwoVotes
-    };
+// function createPoll(){
+//     return {
+//         question: question,
+//         optionOne: optionOne,
+//         optionOneVotes: optionOneVotes,
+//         optionTwo: optionTwo,
+//         optionTwoVotes
+//     };
+
+
+function displayPoll(){
+    questionEl.textContent = question;
+    optionOneEl.textContent = optionOne;
+    optionOneVotesEl.textContent = optionOneVotes;
+    optionTwoEl.textContent = optionTwo;
+    optionOneVotesEl.textContent = optionOneVotes;
 }
 // function createButtons(){
 //     var plusOne = document.createElement('button');
