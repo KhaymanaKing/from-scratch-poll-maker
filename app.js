@@ -15,8 +15,14 @@ const optionTwoVotesEl = document.getElementById('option-two-votes-result');
 
 const pastPollResults = document.getElementById('past-poll-results');
 
+//state
 let optionOneVotes = 0;
 let optionTwoVotes = 0;
+let optionOne = '';
+let optionTwo = '';
+let pollQuestion = '';
+const pastPolls = [];
+
 
 voteOneButton.addEventListener('click', () =>{
     optionOneVotes++;
@@ -36,4 +42,13 @@ minusVoteOneButton.addEventListener('click', () =>{
 minusVoteTwoButton.addEventListener('click', () =>{
     optionTwoVotes--;
     optionTwoVotesEl.textContent = optionTwoVotes;
+});
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+
+    pollQuestion = data.get('poll-question');
+    optionOne = data.get('option-one');
+    optionTwo = data.get('option-two');
 });
