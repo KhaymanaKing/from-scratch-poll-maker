@@ -14,3 +14,26 @@ const optionTwoEl = document.getElementById('option-two-input');
 const optionTwoVotesEl = document.getElementById('option-two-votes-result');
 
 const pastPollResults = document.getElementById('past-poll-results');
+
+let optionOneVotes = 0;
+let optionTwoVotes = 0;
+
+voteOneButton.addEventListener('click', () =>{
+    optionOneVotes++;
+    optionOneVotesEl.textContent = optionOneVotes;
+});
+
+voteTwoButton.addEventListener('click', () =>{
+    optionTwoVotes++;
+    optionTwoVotesEl.textContent = optionTwoVotes;
+});
+
+minusVoteOneButton.addEventListener('click', () =>{
+    optionOneVotes--;
+    optionOneVotesEl.textContent = optionOneVotes;
+});
+
+minusVoteTwoButton.addEventListener('click', () =>{
+    optionTwoVotes--;
+    optionTwoVotesEl.textContent = optionTwoVotes;
+});
