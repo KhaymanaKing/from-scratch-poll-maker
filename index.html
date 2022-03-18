@@ -15,25 +15,24 @@
 <body>
     <main>
         <section class="main-section">
+            <form>
                 <label>
-                    Poll question
                     <input name="poll-question">
                 </label>
                 <label>
-                    Option 1
                     <input name="option-one">
                 </label>
                 <label>
-                    Option 2
                     <input name="option-two">
                 </label>
                 <button id="start-poll">Start Poll</button>
+            </form>
             <div>
                 <button id="option-one-vote">Vote 1</button>
                 <button id="option-two-vote">Vote 2</button>
             </div>
             <div>
-                <button id="option-one-mins">Minus Vote 1</button>
+                <button id="option-one-minus">Minus Vote 1</button>
                 <button id="option-two-minus">Minus Vote 2</button>
             </div>
             <div>
@@ -42,7 +41,7 @@
             </section>
             <section class="current-results">
                 <h3>Current Poll</h3>
-                <p id= "question"></p>
+                <p id= "question-result"></p>
                 <div class="options">
                     <div id="option-one-results">
                         <p id="option-one-input"></p>
