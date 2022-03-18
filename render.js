@@ -1,5 +1,6 @@
-export function renderPoll(pastpoll){
-    const questionEl = document.createElement ('h1');
-    const optionOneEl = 
+export function renderPoll(pollQuestion, optionOne, optionTwo, optionOneVotes, optionTwoVotes){
+    const div = document.createElement('div');
+
+    const currentPollDiv = 
 
 };
