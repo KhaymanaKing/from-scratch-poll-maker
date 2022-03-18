@@ -1,3 +1,5 @@
+import { renderPoll } from "./render";
+
 const form = document.querySelector('form');
 
 const startPollButton = document.getElementById ('start-poll');
@@ -65,7 +67,16 @@ startPollButton.addEventListener('click', () => {
 
 function refreshPoll() {
     currentPollEl.textContent = '';
+    questionEl.textContent = pollQuestion;
     optionOneEl.textContent = optionOne;
     optionTwoEl.textContent = optionTwo;
+    
+    for (let poll of polls){
+        cconst postEl = renderPoll(pollQuestion, optionOne, optionTwo, optionOneVotes, optionTwoVotes);
+        pastPollResults.append(pollEl);}
+        renderPoll();
 
-}
+        optionOneEl.value= '';
+        optionTwoEl.value= ';'
+
+    };
