@@ -55,5 +55,27 @@ form.addEventListener('submit', (e) => {
     quest = data.get('poll-question');
     optOne = data.get('option-one');
     optTwo = data.get('option-two');
+    
 
 });
+
+
+
+closePollButton.addEventListener('click', () => {
+    form.reset();
+
+    const poll = formPoll();
+
+    previousPoll
+})
+
+function formPoll() {
+    return{
+        quest: quest;
+        optOne: optOne; 
+        optTwo: optTwo;
+        oneVotes: oneVotes;
+        twoVotes: twoVotes;
+    };
+}
+
