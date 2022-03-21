@@ -70,10 +70,10 @@ startPollButton.addEventListener('click', () =>{
 endPollButton.addEventListener('click', () =>{
     form.reset();
 
-    const poll = createPoll();
+    const pastpoll = createPoll();
 
-    pastArray.push(poll);
-    resetState();
+    pastArray.push(pastpoll);
+    resetPollState();
     displayCurrentPoll();
     displayList();
 });
@@ -106,7 +106,7 @@ function createPoll() {
     };
 }
 
-function resetState(){
+function resetPollState(){
     question = '';
     optionOne = '';
     optionTwo = '';
