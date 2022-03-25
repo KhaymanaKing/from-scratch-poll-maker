@@ -8,10 +8,30 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 1) **Make a drawing of your app. Simple "wireframes"** 
 1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
+Need to track option 1 and 2 votes. Past poll results.
 1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
+question input
+input 1
+input 2
+
+storage for input 1 and input 2 and question.
+
++/- buttons for option 1 and 2 .
+button to push the options and questions input.
+finish poll button .
+div to collect previous poll results.
+
+
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
+input to put in the options and question. 
+button to push options and question. 
+buttons to add and subtract.
 1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
+click event listeners for submit fields and buttons.
+render for the past poll results grabbing the results from the side board see img right side.
+
+
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
 1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
@@ -24,3 +44,26 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+![wireframe for pollmaker](/assets/wireframespollmaker.jpg "wireframes for pollmaker")
+
+
+
+
+
+
+| User should be able to . . .                                                         |             |
+| :----------------------------------------------------------------------------------- | ----------: |
+| Visit the deployed pages on GitHub pages, with link in the About section of the Github repo|        2 |
+
+| Events                                                                               |             |
+| :----------------------------------------------------------------------------------- | ----------: |
+| On load, see a form and empty current poll div                                             |        2 |
+| On submit, add the poll options and question to the current poll div                                      |        2 |
+| On clicking add or subtract, increment and decrement the correct poll votes in the current poll div|     2 |
+| On clicking finish, empty the current poll div and add the current poll to the "past polls" div. All past polls should be visible in this div by looping through and calling `renderPoll` with each poll. |4|
+
+| Functions                                                              |             |
+| :----------------------------------------------------------------------------------- | ----------: |
+| IMPURE: `displayCurrentPoll()` : mutates DOM to display current state of current poll | 2|
+| IMPURE: `displayAllPolls()` : clears out DOM and appends to poll div using current state of past polls | 3 |
+| PURE: `renderPoll(poll)` : returns DOM node | 3|
