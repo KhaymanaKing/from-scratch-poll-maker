@@ -70,9 +70,9 @@ startPollButton.addEventListener('click', () =>{
 endPollButton.addEventListener('click', () =>{
     form.reset();
 
-    const pastpoll = createPoll();
+    const pastPoll = createPoll();
 
-    pastArray.push(pastpoll);
+    pastArray.push(pastPoll);
     resetPollState();
     displayCurrentPoll();
     displayList();
@@ -99,8 +99,8 @@ function displayList(){
 function createPoll() {
     return {
         question: question,
-        optOne: optOne,
-        optTwo: optTwo,
+        optOne: optionOne,
+        optTwo: optionTwo,
         oneVotes: oneVotes,
         twoVotes: twoVotes,
     };

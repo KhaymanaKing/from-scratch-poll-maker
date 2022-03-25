@@ -8,8 +8,8 @@ export function renderPoll(pastPoll){
     
     section.classList.add('past-results');
     h3.textContent = pastPoll.question;
-    pTagOne.textContent = pastPoll.optionOne;
-    pTagTwo.textContent = pastPoll.optionTwo;
+    pTagOne.textContent = pastPoll.optOne;
+    pTagTwo.textContent = pastPoll.optTwo;
     optOneVotes.textContent = pastPoll.oneVotes;
     optTwoVotes.textContent = pastPoll.twoVotes;
 
